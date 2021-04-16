@@ -21,3 +21,8 @@
 - 静态资源处理
 - html文件处理
 - 自定义loader实现
+
+## webpack 03
+
+- MiniCssExtractPlugin
+- 多页面打包通用方案

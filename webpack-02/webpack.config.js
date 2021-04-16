@@ -15,11 +15,11 @@ module.exports = {
       {
         test: /.(png|jpe?g|gif)$/,
         use: {
-          loader: "url-loader",
+          loader: "url-loader", // url-loader就是file-loader的加强版，内置了file-loader
           options: {
             name: "[name].[ext]",
             outputPath: "assets/images/",
-            limit: 3 * 1024, //对小体积的资源图片进行管理，小图片转成base64,减少请求数量
+            limit: 3 * 1024, // 对小体积的资源图片进行管理，小图片转成base64,减少请求数量 默认单位是字节
           },
         },
       },
@@ -29,6 +29,9 @@ module.exports = {
           loader: "file-loader",
           options: {
             name: "[name].[ext]",
+            // outputPath: "", // 图片存放位置，也就是存放位置            
+            // publicPath: "", // 图片引用位置，css中如何引用图片，就是publicPath决定的
+            // 图片路径+图片名称
           },
         },
       },
